@@ -1,0 +1,219 @@
+<!-- book.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book | Hannah's Beauty Box</title>
+  <meta name="description" content="Book salon or barber services. Multi-select services, choose a stylist or barber, and see a summary. Sample form.">
+  <meta property="og:title" content="Book – Hannah's Beauty Box">
+  <meta property="og:description" content="Multi-select booking form with summary and success state.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/hannahsbeautybox/book">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Book">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23F4813F'/%3E%3Ctext x='50' y='70' font-size='56' text-anchor='middle' fill='%23FFF3E8' font-family='Georgia,serif' font-style='italic' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="demo-bar text-center py-2 px-3" id="demoBar">
+    <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
+      <span class="small mb-0">Design concept for <strong>Hannah's Beauty Box</strong>. Not the official website. Sample content.</span>
+      <div class="d-flex gap-2 align-items-center">
+        <button class="neon-switch" id="neonSwitch" aria-label="Toggle neon sign and dark mode" aria-pressed="true" title="Toggle neon sign">
+          <span class="neon-switch-track"><span class="neon-switch-thumb"></span></span>
+        </button>
+        <button class="btn btn-sm btn-outline-light rounded-pill" id="dismissDemoBar" aria-label="Dismiss demo bar"><i class="fa-regular fa-circle-xmark"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="brand-diamond" aria-hidden="true"><svg viewBox="0 0 60 60" width="40" height="40"><rect x="10" y="10" width="40" height="40" rx="8" transform="rotate(45 30 30)" fill="#F4813F"/><text x="30" y="38" font-size="24" text-anchor="middle" fill="#FFF3E8" font-family="Georgia, serif" font-style="italic" font-weight="bold">H</text></svg></span>
+        <span class="brand-text">Hannah's <span class="text-orange">Beauty Box</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-orange rounded-pill px-4" href="book.html"><i class="fa-regular fa-calendar-check me-1"></i> Book now</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="py-5 section-cream">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h1 class="display-3 mb-3">Book your visit</h1>
+            <p class="lead text-muted-soft mb-4">Sample form. No real booking is made.</p>
+
+            <form id="bookingForm" novalidate>
+              <h2 class="h5 mb-3">Choose services</h2>
+              <div class="row g-2 mb-4">
+                <div class="col-md-6">
+                  <div class="form-check service-check p-3 rounded-3">
+                    <input class="form-check-input" type="checkbox" id="svcHaircut" value="Haircut & style" data-price="80">
+                    <label class="form-check-label" for="svcHaircut">Haircut & style <span class="text-muted-soft small">(45 min · K80)</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check service-check p-3 rounded-3">
+                    <input class="form-check-input" type="checkbox" id="svcColour" value="Colour" data-price="180">
+                    <label class="form-check-label" for="svcColour">Colour <span class="text-muted-soft small">(90 min · K180)</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check service-check p-3 rounded-3">
+                    <input class="form-check-input" type="checkbox" id="svcFacial" value="Facial" data-price="120">
+                    <label class="form-check-label" for="svcFacial">Facial <span class="text-muted-soft small">(60 min · K120)</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check service-check p-3 rounded-3">
+                    <input class="form-check-input" type="checkbox" id="svcBarber" value="Barber cut" data-price="50">
+                    <label class="form-check-label" for="svcBarber">Barber cut <span class="text-muted-soft small">(30 min · K50)</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check service-check p-3 rounded-3">
+                    <input class="form-check-input" type="checkbox" id="svcBeard" value="Beard trim" data-price="35">
+                    <label class="form-check-label" for="svcBeard">Beard trim <span class="text-muted-soft small">(20 min · K35)</span></label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check service-check p-3 rounded-3">
+                    <input class="form-check-input" type="checkbox" id="svcShave" value="Hot towel shave" data-price="60">
+                    <label class="form-check-label" for="svcShave">Hot towel shave <span class="text-muted-soft small">(30 min · K60)</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <h2 class="h5 mb-3">Preferred stylist or barber</h2>
+              <select class="form-select mb-4" id="stylistSelect" aria-label="Choose a stylist or barber">
+                <option value="">No preference</option>
+                <option value="Hannah">Hannah</option>
+                <option value="Alex">Alex</option>
+                <option value="Sam">Sam</option>
+                <option value="Jordan">Jordan</option>
+              </select>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="bookingDate" class="form-label">Date</label>
+                  <input type="date" class="form-control" id="bookingDate" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Time</label>
+                  <div class="d-flex flex-wrap gap-2" id="timeChips">
+                    <button type="button" class="btn time-chip" data-time="9:00">9:00</button>
+                    <button type="button" class="btn time-chip" data-time="10:30">10:30</button>
+                    <button type="button" class="btn time-chip" data-time="12:00">12:00</button>
+                    <button type="button" class="btn time-chip" data-time="14:00">14:00</button>
+                    <button type="button" class="btn time-chip" data-time="16:00">16:00</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="bookingNotes" class="form-label">Notes (optional)</label>
+                <textarea class="form-control" id="bookingNotes" rows="3" placeholder="Any preferences or sample notes..."></textarea>
+              </div>
+
+              <!-- Summary card -->
+              <div class="summary-card p-4 rounded-4 mb-4" id="summaryCard">
+                <h2 class="h6 mb-2">Booking summary</h2>
+                <p class="mb-1 small"><strong>Services:</strong> <span id="summaryServices">None selected</span></p>
+                <p class="mb-1 small"><strong>Stylist:</strong> <span id="summaryStylist">No preference</span></p>
+                <p class="mb-1 small"><strong>Date:</strong> <span id="summaryDate">—</span></p>
+                <p class="mb-1 small"><strong>Time:</strong> <span id="summaryTime">—</span></p>
+                <p class="mb-0 small"><strong>Total:</strong> <span id="summaryTotal" class="text-orange fw-bold">K0</span></p>
+              </div>
+
+              <div class="mb-3">
+                <label for="bookName" class="form-label">Your name (sample)</label>
+                <input type="text" class="form-control" id="bookName" placeholder="e.g. Maria" required>
+              </div>
+              <div class="mb-3">
+                <label for="bookEmail" class="form-label">Email (sample)</label>
+                <input type="email" class="form-control" id="bookEmail" placeholder="maria@example.com" required>
+              </div>
+
+              <button type="submit" class="btn btn-orange btn-lg rounded-pill px-4">Confirm booking</button>
+            </form>
+
+            <div id="bookingSuccess" class="alert alert-success mt-4 d-none" role="alert">
+              <i class="fa-regular fa-circle-check me-2"></i> Thank you! Your sample booking was received.
+              <a id="bookingWhatsapp" href="#" target="_blank" rel="noopener" class="btn btn-success btn-sm rounded-pill mt-2 d-block">
+                <i class="fa-brands fa-whatsapp me-1"></i> Continue on WhatsApp
+              </a>
+            </div>
+            <p class="small text-muted mt-3"><i class="fa-solid fa-shield"></i> All fields are placeholders. No real data is stored.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-espresso text-cream pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <svg viewBox="0 0 60 60" width="36" height="36"><rect x="10" y="10" width="40" height="40" rx="8" transform="rotate(45 30 30)" fill="#F4813F"/><text x="30" y="38" font-size="24" text-anchor="middle" fill="#FFF3E8" font-family="Georgia, serif" font-style="italic" font-weight="bold">H</text></svg>
+            <span class="fw-bold">Hannah's Beauty Box</span>
+          </div>
+          <p class="small text-cream-muted">Sample content for demonstration only. Not the official website.</p>
+          <p class="small text-cream-muted">Concept web design by Tesseract Cloud Technologies, Port Moresby.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-semibold">Quick links</h6>
+          <ul class="list-unstyled small">
+            <li><a href="index.html" class="text-cream-muted text-decoration-none">Home</a></li>
+            <li><a href="services.html" class="text-cream-muted text-decoration-none">Services</a></li>
+            <li><a href="gallery.html" class="text-cream-muted text-decoration-none">Gallery</a></li>
+            <li><a href="about.html" class="text-cream-muted text-decoration-none">About</a></li>
+            <li><a href="contact.html" class="text-cream-muted text-decoration-none">Contact</a></li>
+            <li><a href="book.html" class="text-cream-muted text-decoration-none">Book</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="fw-semibold">Contact (placeholder)</h6>
+          <p class="small text-cream-muted mb-1"><i class="fa-solid fa-phone me-2"></i>+675 123 4567</p>
+          <p class="small text-cream-muted"><i class="fa-solid fa-envelope me-2"></i>hello@example.com</p>
+          <p class="small text-cream-muted"><i class="fa-solid fa-location-dot me-2"></i>Port Moresby</p>
+        </div>
+      </div>
+      <hr class="border-cream opacity-25 mt-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center small text-cream-muted">
+        <span>© 2025 Hannah's Beauty Box Demo. All placeholder content.</span>
+        <span>Concept design – not official</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-action-bar d-block d-sm-none fixed-bottom bg-cream border-top shadow-sm py-2">
+    <div class="container d-flex justify-content-around">
+      <a href="book.html" class="btn btn-orange rounded-pill px-3 py-2" aria-label="Book a service"><i class="fa-regular fa-calendar-check me-1"></i> Book</a>
+      <a href="https://wa.me/67512345678?text=Hello%20Hannah%27s%20Beauty%20Box%20demo" class="btn btn-success rounded-pill px-3 py-2" aria-label="WhatsApp us"><i class="fa-brands fa-whatsapp me-1"></i> WhatsApp</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
